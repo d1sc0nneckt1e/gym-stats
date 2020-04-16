@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { IonApp } from "@ionic/react";
 
 /* Core CSS required for Ionic components to work properly */
