@@ -1,6 +1,6 @@
 {
-  "appId": "com.bmiCalculator.com",
-  "appName": "bmiCalculator",
+  "appId": "com.gymStats.com",
+  "appName": "gymStats",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",
