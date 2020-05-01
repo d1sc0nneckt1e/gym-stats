@@ -16,6 +16,7 @@ import { calendar, personCircle, map, informationCircle } from "ionicons/icons";
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import Tab4 from './pages/Tab4';
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -46,28 +47,29 @@ const App: React.FC = () => {
         <IonRouterOutlet>
           <Route path="/tab1" component={Tab1} exact={true} />
           <Route path="/tab2" component={Tab2} exact={true} />
-          <Route path="/tab3" component={Tab3} />
+          <Route path="/tab3" component={Tab3} exact={true} />
+          <Route path="/tab4" component={Tab4} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
 
           <IonTabBar slot="bottom">
-            <IonTabButton tab="schedule">
+            <IonTabButton tab="schedule" href='/tab1'>
               <IonIcon icon={calendar} />
               <IonLabel>Schedule</IonLabel>
               <IonBadge>6</IonBadge>
             </IonTabButton>
 
-            <IonTabButton tab="speakers">
+            <IonTabButton tab="speakers" href='/tab2'>
               <IonIcon icon={personCircle} />
               <IonLabel>Speakers</IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab="map">
+            <IonTabButton tab="map" href='/tab3'>
               <IonIcon icon={map} />
               <IonLabel>Map</IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab="about">
+            <IonTabButton tab="about"  href='/tab4'>
               <IonIcon icon={informationCircle} />
               <IonLabel>About</IonLabel>
             </IonTabButton>
