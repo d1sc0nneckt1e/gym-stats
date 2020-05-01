@@ -1,5 +1,14 @@
 import React from "react";
-import { IonApp } from "@ionic/react";
+import {
+  IonApp,
+  IonTabs,
+  IonTabBar,
+  IonTabButton,
+  IonIcon,
+  IonLabel,
+  IonBadge,
+} from "@ionic/react";
+import { calendar, personCircle, map, informationCircle } from "ionicons/icons";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -22,9 +31,34 @@ import "./theme/variables.css";
 
 const App: React.FC = () => {
   return (
-    <IonApp>
-      <h2>gymStats</h2>
-    </IonApp>
+    <React.Fragment>
+      <IonApp>
+        <IonTabs>
+          <IonTabBar slot="bottom">
+            <IonTabButton tab="schedule">
+              <IonIcon icon={calendar} />
+              <IonLabel>Schedule</IonLabel>
+              <IonBadge>6</IonBadge>
+            </IonTabButton>
+
+            <IonTabButton tab="speakers">
+              <IonIcon icon={personCircle} />
+              <IonLabel>Speakers</IonLabel>
+            </IonTabButton>
+
+            <IonTabButton tab="map">
+              <IonIcon icon={map} />
+              <IonLabel>Map</IonLabel>
+            </IonTabButton>
+
+            <IonTabButton tab="about">
+              <IonIcon icon={informationCircle} />
+              <IonLabel>About</IonLabel>
+            </IonTabButton>
+          </IonTabBar>
+        </IonTabs>
+      </IonApp>
+    </React.Fragment>
   );
 };
 
